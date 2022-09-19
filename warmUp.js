@@ -50,3 +50,28 @@ let square = function(x) {
     return x * x;
 }
 console.log(square(10));
+
+
+
+//function expressions can also be used as arguments to other functions
+console.log([3, 2, 1].sort (function(a, b) {return a - b; }));
+
+
+
+// arrow functions, no need for a function name since arrow functions are expressions not statements
+let sum = (x, y) => {
+    return x + y;
+}
+
+
+
+let o = {                                   // object o
+    m: function() {                         // method m of the object o
+        console.log(this === o);
+        f();                                // now we call the helper function f()
+        function f() {
+            console.log(this === o);
+        }
+    }
+}
+o.m();                                      //invoke the method m on the object o
