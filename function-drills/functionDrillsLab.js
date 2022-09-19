@@ -205,8 +205,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-
-
+function printAllNames(names) {
+  for (let i = 0; i < namesArr.length; i++) {
+    console.log(namesArr[i]);
+  }
+}
+printAllNames();
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -216,7 +220,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+function thatsOdd(number) {
+  if (number % 2 === 0) {
+    return "Thats not odd";
+  } else {
+    return "That is odd indeed";
+  }
+}
+let oddChecker = thatsOdd(19);
+console.log(oddChecker);
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -229,7 +241,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+let bestMovie = (movie) => `${movie} is the best movie ever`
+console.log(bestMovie("Harry Plopper"));
 
 
 ////////////////// PROBLEM 15 ////////////////////
