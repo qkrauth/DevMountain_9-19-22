@@ -16,12 +16,17 @@
 
 // [0, 1, 2, 3, 4, 5] should log false because no two numbers add to 0.
 
-let array1 = [1, 4, 11, 2, 37, -4];
 
-for (int i = 0; i < array1.length - 1; i++) {
-    if (array1[i] + array1[i] === 0) {
-        console.log("True");
-    } else {
-        console.log("False");
+let array = [28, 43, -12, 30, 4, 0, 12];
+
+let value = false;
+
+for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {  // the reason (let j = i + 1) is because we want j to be the next value in the array after i. so dont just set j = 1, set it equal to the value right after i.
+        if (array[i] + array[j] === 0) {
+            value = true;
+            break; // break; stops the current for loop
+        }
     }
 }
+console.log(value);
