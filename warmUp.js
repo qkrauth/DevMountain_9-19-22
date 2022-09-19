@@ -1,11 +1,3 @@
-// Add To Zero
-// Difficulty
-// Easy
-
-// Concepts
-// Loops, General
-
-
 // Given an array of numbers, console.log true if any two numbers in the array add to zero, otherwise log false.
 
 // For example:
@@ -30,3 +22,31 @@ for (let i = 0; i < array.length; i++) {
     }
 }
 console.log(value);
+
+
+
+// first function, many ways to write them
+function func_name(name_input, fav_number) {
+    let return_string = `your name is ${name_input}, and your fav number is ${fav_number}`
+    return return_string
+}
+let sentence = func_name("Quinten", 19)
+console.log(sentence);
+
+
+
+
+// calling an adding numbers function
+function add_numbers(num1, num2) {
+    return num1 + num2
+}
+console.log(add_numbers(2,2));
+
+
+
+
+// function expression, assigning a function to a variable
+let square = function(x) {
+    return x * x;
+}
+console.log(square(10));
